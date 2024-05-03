@@ -5,6 +5,10 @@ Project Name is a Django-based RESTful API for managing products in an e-commerc
 We are using SQlite3 as DB.
 Virtual Env also, added.
 
+Folder structure:
+  project name: ecom_api
+  app name: products
+
 
 Features:
   1. Create, read, update, and delete (CRUD) operations for products

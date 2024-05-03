@@ -14,6 +14,7 @@ Features:
   1. Create, read, update, and delete (CRUD) operations for products
   2. User registration and JWT-based authentication
   3. Swagger documentation for API exploration
+  4. We've added pagination and set default_limit to 10 and max_limit to 100, meaning by default 10 records will be shown per page, and maximum 100 records can be shown per page.
      
 Setup:
   1. Clone the Repository: Copy code : git clone https://github.com/your-username/project-name.git
@@ -24,7 +25,8 @@ Setup:
      
 Start the Development Server: python manage.py runserver
 Access the API:Open your web browser and navigate to http://localhost:8000 to access the API endpoints.
-Access Swagger Documentation:Navigate to http://localhost:8000/docs/swagger/ in your browser to view the Swagger documentation for API exploration.
+Access Swagger Documentation: Navigate to http://localhost:8000/docs/swagger/ in your browser to view the Swagger documentation for API exploration.
+To use Pagination give limit and offset as given i.e. http://127.0.0.1:8000/products/?limit=5&offset=0
 
 Usage
   1. User Registration

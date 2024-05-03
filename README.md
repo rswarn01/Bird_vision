@@ -4,6 +4,7 @@ Overview
 Project Name is a Django-based RESTful API for managing products in an e-commerce application. It provides endpoints for creating, updating, retrieving, and deleting products, along with user authentication using JWT tokens. Swagger documentation is integrated to facilitate API exploration.
 We are using SQlite3 as DB.
 
+
 Features:
   1. Create, read, update, and delete (CRUD) operations for products
   2. User registration and JWT-based authentication

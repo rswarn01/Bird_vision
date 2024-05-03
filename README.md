@@ -6,8 +6,8 @@ We are using SQlite3 as DB.
 Virtual Env also, added.
 
 Folder structure:
-  project name: ecom_api
-  app name: products
+  1. project name: ecom_api
+  2. app name: products
 
 
 Features:

@@ -32,3 +32,5 @@ Accessing Protected Endpoints:
   2. Set the Authorization type to Bearer Token and paste the access token.
      
 You can now access the protected endpoints for product management.
+To tun the test.py file for testing, run : python manage.py test
+Other than you can run using postman.

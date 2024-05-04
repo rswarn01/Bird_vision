@@ -1,0 +1,478 @@
+{
+	"info": {
+		"_postman_id": "70744a14-239a-4f09-83e1-e8ea1bb36e8e",
+		"name": "Bird Vision",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "19188117",
+		"_collection_link": "https://bold-resonance-706397.postman.co/workspace/Supplier-Prism~b7eae6e0-9b09-499c-9891-d95dd8aaab77/collection/19188117-70744a14-239a-4f09-83e1-e8ea1bb36e8e?action=share&source=collection_link&creator=19188117"
+	},
+	"item": [
+		{
+			"name": "get all product",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzE0NzU3MTI5LCJpYXQiOjE3MTQ3NTM1MjksImp0aSI6IjdhOGY0YmY2ZDY4MjRiMTg5ZTk4NzVkNjc1N2MyNjBlIiwidXNlcl9pZCI6Mn0.SgUK7Wzr7IfFzAL_ehVoZ-RMH336M12ErrEU3ijFfxU",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaCIsImV4cCI6MTcxNDgzOTQzOSwiaWF0IjoxNzE0NzUzMDM5LCJqdGkiOiJkNDM4YWEyZmFkOWY0MzE0YWZjZjU4YTgyZWIyMTBkMCIsInVzZXJfaWQiOjF9.3rs_D26qmMP2YmnYJURnrLLjlH4cHrIaM2_VJtVNNC4",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "title",
+							"value": "Shirts",
+							"type": "text"
+						},
+						{
+							"key": "description",
+							"value": "for winters",
+							"type": "text"
+						},
+						{
+							"key": "price",
+							"value": "1500",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/products/?offset=0&limit=5",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"products",
+						""
+					],
+					"query": [
+						{
+							"key": "title",
+							"value": "Socks",
+							"disabled": true
+						},
+						{
+							"key": "price",
+							"value": "200",
+							"disabled": true
+						},
+						{
+							"key": "description",
+							"value": "for winters",
+							"disabled": true
+						},
+						{
+							"key": "offset",
+							"value": "0"
+						},
+						{
+							"key": "limit",
+							"value": "5"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get a product detail",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzE0NzU3MTI5LCJpYXQiOjE3MTQ3NTM1MjksImp0aSI6IjdhOGY0YmY2ZDY4MjRiMTg5ZTk4NzVkNjc1N2MyNjBlIiwidXNlcl9pZCI6Mn0.SgUK7Wzr7IfFzAL_ehVoZ-RMH336M12ErrEU3ijFfxU",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "title",
+							"value": "Shirts",
+							"type": "text"
+						},
+						{
+							"key": "description",
+							"value": "for winters",
+							"type": "text"
+						},
+						{
+							"key": "price",
+							"value": "1500",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/products/4",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"products",
+						"4"
+					],
+					"query": [
+						{
+							"key": "title",
+							"value": "Socks",
+							"disabled": true
+						},
+						{
+							"key": "price",
+							"value": "200",
+							"disabled": true
+						},
+						{
+							"key": "description",
+							"value": "for winters",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "add product",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzE0NzU3MTI5LCJpYXQiOjE3MTQ3NTM1MjksImp0aSI6IjdhOGY0YmY2ZDY4MjRiMTg5ZTk4NzVkNjc1N2MyNjBlIiwidXNlcl9pZCI6Mn0.SgUK7Wzr7IfFzAL_ehVoZ-RMH336M12ErrEU3ijFfxU",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "title",
+							"value": "T Shirts",
+							"type": "text"
+						},
+						{
+							"key": "description",
+							"value": "for summers",
+							"type": "text"
+						},
+						{
+							"key": "price",
+							"value": "600",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/products/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"products",
+						""
+					],
+					"query": [
+						{
+							"key": "title",
+							"value": "Socks",
+							"disabled": true
+						},
+						{
+							"key": "price",
+							"value": "200",
+							"disabled": true
+						},
+						{
+							"key": "description",
+							"value": "for winters",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update product",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzE0NzU3MTI5LCJpYXQiOjE3MTQ3NTM1MjksImp0aSI6IjdhOGY0YmY2ZDY4MjRiMTg5ZTk4NzVkNjc1N2MyNjBlIiwidXNlcl9pZCI6Mn0.SgUK7Wzr7IfFzAL_ehVoZ-RMH336M12ErrEU3ijFfxU",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "title",
+							"value": "Shirts",
+							"type": "text"
+						},
+						{
+							"key": "description",
+							"value": "for winters",
+							"type": "text"
+						},
+						{
+							"key": "price",
+							"value": "1500",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/products/3/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"products",
+						"3",
+						""
+					],
+					"query": [
+						{
+							"key": "title",
+							"value": "Socks",
+							"disabled": true
+						},
+						{
+							"key": "price",
+							"value": "200",
+							"disabled": true
+						},
+						{
+							"key": "description",
+							"value": "for winters",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete product",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzE0NzU3MTI5LCJpYXQiOjE3MTQ3NTM1MjksImp0aSI6IjdhOGY0YmY2ZDY4MjRiMTg5ZTk4NzVkNjc1N2MyNjBlIiwidXNlcl9pZCI6Mn0.SgUK7Wzr7IfFzAL_ehVoZ-RMH336M12ErrEU3ijFfxU",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "id",
+							"value": "1",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "description",
+							"value": "for winters",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "price",
+							"value": "1500",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/products/2/delete/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"products",
+						"2",
+						"delete",
+						""
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "Socks",
+							"disabled": true
+						},
+						{
+							"key": "price",
+							"value": "200",
+							"disabled": true
+						},
+						{
+							"key": "description",
+							"value": "for winters",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create user",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "username",
+							"value": "rrsoni",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "1234",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/users/create/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"users",
+						"create",
+						""
+					],
+					"query": [
+						{
+							"key": "username",
+							"value": "rsoni",
+							"disabled": true
+						},
+						{
+							"key": "password",
+							"value": "1234",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "generate token",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "username",
+							"value": "rrsoni",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "1234",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/users/token/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"users",
+						"token",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

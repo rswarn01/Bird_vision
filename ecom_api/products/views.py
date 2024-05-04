@@ -7,6 +7,12 @@ from rest_framework_simplejwt.tokens import RefreshToken
 from rest_framework.views import APIView
 from django.contrib.auth.models import User
 from .serializers import ProductSerializer, UserSerializer
+from rest_framework.pagination import LimitOffsetPagination
+
+
+class ProductPagination(LimitOffsetPagination):
+    default_limit = 10
+    max_limit = 100
 
 
 # class to create user, accepts username, password
@@ -43,6 +49,7 @@ class ProductList(generics.ListCreateAPIView):
         queryset = Product.objects.all()
         serializer_class = ProductSerializer
         permission_classes = [permissions.IsAuthenticated]
+        pagination_class = ProductPagination
     except Exception as exc:
         print("Error in getting product", str(exc))
 
